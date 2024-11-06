@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Romanesco&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Romanesco&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Romanesco&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color:  #ff9a9e;
+    font-family: "Poppins", sans-serif;
+    min-height:100vh;
+}
+
+.header-container{
+    padding: 20px 50px;
+ 
+    background: linear-gradient(120deg,  hsl(190, 81%, 45%), #fad0c4, #ff9a9e,  hsl(190, 81%, 45%) );
+    color: white;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.header-left{
+
+    width: 30%;
+ 
+}
+
+.header-left h1{
+    font-family: "Great Vibes";
+    letter-spacing: 2px;
+}
+
+.header-right{
+
+   width: 70%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.header-right input{
+    width: 350px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    transition: .3s ease-in-out;
+}
+
+
+
+#search{
+    width: 40px;
+    margin-left: 20px;
+
+}
+#searchMusic{
+    border-radius: 50px;
+    padding: 5px 25px
+}
+.body{
+    display: flex;
+    height: 100vh;
+  
+}
+
+.body .sidebar{
+    
+    font-weight: bold;
+    width: 20%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+  
+    align-items: flex-start;
+    padding: 50px;
+
+}
+
+.body .sidebar li{
+    margin-top: 15px;
+    color: white;
+}
+
+.body .music-body{
+    width: 55%;
+    min-height: 650px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+   
+
+
+}
+
+.music-body .music-container{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    color: white;
+    background-color: pink;
+
+
+}
+
+
+
+
+.music-body img{
+    height: 50px;
+    width: 50px;
+}
+
+.music-box{
+    display: flex;
+    
+    align-items: center;
+  
+    height: 100px;
+    width:  60%;
+    gap: 50px;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    border-radius: 15px;
+    transition: ease-in-out .3s;
+    background-color: pink;
+
+
+}
+
+.music-box:hover{
+    background-color: hsl(190, 81%, 45%);
+    color: white;
+}
+
+
+
+
+
+.music-box {
+    background-color: pink;
+
+    width: 100%;
+    /* Other styles */
+}
+
+/* Hover effect */
+.music-box:hover {
+    background-color: hsl(190, 81%, 45%);
+}
+
+/* Active background color when a song is playing */
+.active-music-box {
+    background-color: hsl(190, 81%, 45%);
+}
+
+.albumPic{
+    display: flex;
+    padding: 25px;
+    height: 100%;
+    width: 40% ;
+    display: flex;
+    flex-direction: column;
+    background-color:  #ff9a9e;
+    
+   color: white;
+   gap: 10px;
+    
+
+}
+
+.albumPic .img{
+    height: 60%;
+    width: 100%;
+  
+  
+
+
+ 
+
+    
+}
+.img{
+    border-radius: 15px;
+   
+}
+
+.img img{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+
+
+#progress-bar {
+ 
+    width: 100%;
+    cursor: pointer;
+    height: 2px;
+    background-color: hsl(190, 81%, 45%);
+}
+
+.controls-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+   
+}
+
+
+
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: repeating-conic-gradient(  #fad0c4 0 90deg, #ff9a9e 0 180deg);
+    animation: l21 1s infinite linear;
+  }
+  @keyframes l21 {
+    100% {transform: rotate(.5turn)}
+  }
+
+  .title-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    align-items: center;
+   
+    letter-spacing: 1px;
+  }
+
+  .title{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .controls-container i {
+    font-size: 24px;      /* Adjust the size as needed */
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+ 
+    
+}
+
+
+
+.controls-container div{
+  
+    background-color:  hsl(190, 81%, 45%);;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;         /* Adjust width based on your design */
+    height: 40px;
+    border-radius: 50%;  /* Makes it look more button-like */
+    cursor: pointer;
+    margin: 0 5px;
+
+
+}
+
+.play-icon i, .controls-container i {
+    padding: 4px;       /* Adjust as needed to ensure a balanced look */
+    margin: 0;
+    transition: ease-in-out .3s;
+}
+
+.controls-container div:hover{
+    background-color:  #fad0c4;   /* Light gray background on hover */
+    color: #333;                 /* Darker icon color on hover */
+}
+
+
+
+.music-box .play-icon {
+    display: none;
+    margin: 40%;
+    position: absolute;
+    transition: ease-in-out .3s;
+}
+
+.music-box:hover .play-icon {
+    display: block;
+
+}
+
+
+
+
+
+
+
+.play-icon i{
+    display: block;
+    font-size: 24px;     
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Define the gradient animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.gradient-background {
+    background: linear-gradient(120deg,  hsl(190, 81%, 45%), #fad0c4, #ff9a9e,  hsl(190, 81%, 45%) );
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+    border-radius: 8px; /* Optional: adjust to match your design */
+    padding: 10px;
+}
+
+
+@media(min-width: 1527px){
+    .body .sidebar{
+        width: 13%;
+    }
+
+    .albumPic .img{
+        margin-left: 5px;
+    }
+    .music-box .play-icon {
+        margin-left: 42%;
+    }
+}
+
+@media(min-width: 1400px){
+    .body .sidebar{
+        width: 12%;
+    }
+
+    .albumPic .img{
+        
+    }
+    .music-box .play-icon {
+        margin-left: 42%;
+    }
+}
+
+/* Add this for 1024px responsiveness */
+@media (max-width: 1024px) {
+
+  
+
+    /* Position the play icon relative to the music item */
+    .music-body .music-box {
+        width: 90%; /* Keep it responsive */
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Spread items evenly */
+        padding: 10px 20px; /* Adjust padding for better spacing */
+    }
+
+    /* Fix the position of the play icon */
+    .music-box .play-icon {
+        display: block;
+        position: relative;
+        margin-left: auto; /* Push the icon to the far right */
+        font-size: 24px; /* Adjust icon size if needed */
+    }
+
+    
+    .body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Hide sidebar by default */
+    .body .sidebar {
+        display: none;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background: linear-gradient(120deg,  hsl(190, 81%, 45%), #fad0c4, #ff9a9e,  hsl(190, 81%, 45%) );
+        filter: opacity(0.8);
+        z-index: 10;
+        top: 105px;
+        left: 0;
+        padding: 20px;
+        height: 100%;
+    }
+
+    /* Burger menu button */
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 30px;
+        margin: 10px 0;
+    }
+
+    /* Toggle sidebar visibility */
+    .sidebar.show {
+        display: flex;
+    }
+   
+
+/* For larger screens, hide the burger menu */
+.burger-menu {
+
+}
+
+.body .music-body{
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.header-container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.albumPic .img{
+    height: 100%;
+    width: 100%; 
+}
+
+.albumPic{
+    height: 60%;
+    width: 100%;
+  
+  
+
+
+ 
+
+    
+}
+
+.title-container{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}   
+
+.controls-container{
+    margin-top: 5px;
+}
+.progress-bar-container{
+   
+}
+}
+
+@media (max-width: 430px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        padding:  20px;
+     
+       
+    }
+   
+
+
+    .header-right {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .search-icon {
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+    .search-input {
+        width: 0;
+        height: 28px;
+        font-size: 12px;
+        border-radius: 10px;
+        padding: 0;
+        border: 1px solid #ccc;
+        opacity: 0;
+        transition: opacity 0.3s ease, padding 0.3s ease;
+        overflow: hidden;
+    }
+    
+    /* Define keyframes for width animation */
+    @keyframes expandInput {
+        from {
+            width: 0;
+        }
+        to {
+            width: 180px;
+        }
+    }
+    
+    @keyframes collapseInput {
+        from {
+            width: 180px;
+        }
+        to {
+            width: 0;
+        }
+    }
+    
+    /* When active class is added, apply animation */
+    .header-right.active .search-input {
+        animation: expandInput 0.3s forwards;
+        opacity: 1;
+        padding: 5px;
+    }
+    
+    .header-right:not(.active) .search-input {
+        animation: collapseInput 0.3s forwards;
+        opacity: 0;
+        padding: 0;
+    }
+    
+    .header-left{
+
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     
+    }
+    
+     .header-right input {
+        width: 100%;
+        font-size: 16px; /* Reduce font size */
+        height: 40px; /* Adjust height */
+    }
+
+    .body {
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
+        font-size: 0.7rem;
+    }
+    
+    .body .music-body {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .music-body .music-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Space between songs */
+    }
+    
+    .music-body .music-box {
+        width: 100%; /* Full width */
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        background-color: #fad0c4; /* Background color for visibility */
+        border-radius: 8px;
+    }
+    
+    .music-body .music-box img {
+        height: 40px;
+        width: 40px;
+        flex-shrink: 0; /* Keep the image size constant */
+    }
+    
+ 
+ 
+    
+    .music-box .loader {
+     
+       
+        width: 35px;
+        height: 35px;
+       
+    }
+
+  
+    
+    /* Hiding the play/pause icons on small screens */
+    @media (max-width: 430px) {
+        .music-box .play-icon i,
+        .music-box .pause-icon i {
+            display: none;
+        }
+    }
+    
+
+}
+  

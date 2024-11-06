@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Senerade for Angila</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header-container">
+            <div class="header-left">
+                <h1>Senerade for Angila</h1>
+            </div>  
+            <div class="header-right">
+                <i class="fa fa-search search-icon"></i>
+                <input type="text" placeholder="Search for music" id="searchMusic" class="search-input">
+                <div id="burger"></div><i ></i>
+            </div>
+        </div>
+        <div class="body">
+            <div class="sidebar">
+                <ul>
+                    <li>Home</li>
+                    <li>Music</li>
+                    <li>Albums</li>
+                    <li>Artists</li>
+                    <li>Genres</li>
+                    <li>Playlists</li>
+                </ul>
+            </div>
+            <div class="music-body" id="music-body">
+               
+            </div>
+            <div class="albumPic">
+                <div class="img">
+                    <img src="img/default.jpg" alt="" id="albumPic">
+                </div>
+                <div class="controls">
+                    <div class="title-container">
+                        <div class="title">-</div>
+                        <div class="artist-album">-</div>
+                    </div>
+                    <div class="time-container">
+                        <span id="current-time">0:00</span> / <span id="total-duration">0:00</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <input type="range" id="progress-bar" value="0" min="0" max="100">
+                    </div>
+                    <div class="controls-container">
+                        <div id="prev"><i class="fas fa-backward"></i></div>
+                        <div id="pause"><i class="fas fa-play"></i></div>
+                        <div id="next"><i class="fas fa-forward"></i></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
