@@ -11,13 +11,13 @@ const title = document.querySelector(".title");
 const artistAlbum = document.querySelector(".artist-album");
 
 const songsList = [
-    { file: "Yellow-Coldplay.mp3", name: "Yellow", artist: "Coldplay", image: "yellow-bg.jpg" },
-    { file: "save your tears.mp3", name: "Save Your Tears", artist: "The Weeknd", image: "save your tears-bg.png" },
-    { file: "Dilaw.mp3", name: "Dilaw", artist: "Maki", image: "dilaww.jpg" },
-    { file: "in bloom.mp3", name: "In Bloom", artist: "Neck Deep", image: "inbloom.jpg" },
-    { file: "cancer.mp3", name: "Cancer", artist: "My Chemical Romance", image: "cancerr.jpg" },
-    { file: "Starboy.mp3", name: "Starboy", artist: "The Weeknd", image: "starboy.png" },
-    { file: "love story.mp3", name: "Love Story", artist: "Taylor Swift", image: "lovestory.jpg" },
+    { file: "music/Yellow-Coldplay.mp3", name: "Yellow", artist: "Coldplay", image: "img/yellow-bg.jpg" },
+    { file: "music/save your tears.mp3", name: "Save Your Tears", artist: "The Weeknd", image: "img/save your tears-bg.png" },
+    { file: "music/Dilaw.mp3", name: "Dilaw", artist: "Maki", image: "img/dilaww.jpg" },
+    { file: "music/in bloom.mp3", name: "In Bloom", artist: "Neck Deep", image: "img/inbloom.jpg" },
+    { file: "music/cancer.mp3", name: "Cancer", artist: "My Chemical Romance", image: "img/cancerr.jpg" },
+    { file: "music/Starboy.mp3", name: "Starboy", artist: "The Weeknd", image: "img/starboy.png" },
+    { file: "music/love story.mp3", name: "Love Story", artist: "Taylor Swift", image: "img/lovestory.jpg" },
 ];
 
 let currentSong = null;
@@ -27,6 +27,22 @@ let previousMusicBox = null;
 
 function display(songsToDisplay) {
     musicBody.innerHTML = ""; // Clear previous songs
+    if(songsToDisplay.length===0){
+      
+        const img = document.createElement("img");
+        img.src = "img/sowwy.gif";
+        img.style.width = "150px";
+        img.style.height ="150px";
+        img.style.borderRadius = "15px"
+       
+        musicBody.appendChild(img);
+
+        return;
+
+      
+       
+    }
+    
 
     songsToDisplay.forEach((song, index) => {
         const musicContainer = document.createElement("div");
@@ -71,7 +87,7 @@ function display(songsToDisplay) {
         musicBox.appendChild(loader);
         musicBox.appendChild(playIcon);
         musicContainer.appendChild(musicBox);
-
+      
         musicBody.appendChild(musicContainer);
     });
 }
@@ -169,7 +185,7 @@ searchMusic.addEventListener("input", (e) => {
 
 const burgerMenu = document.getElementById("burger");
 burgerMenu.className = 'burger-menu';
-burgerMenu.innerHTML = '☰'; // Unicode for burger icon
+burgerMenu.innerHTML = '💛'; // Unicode for burger icon
 
 
 burgerMenu.addEventListener('click', () => {
