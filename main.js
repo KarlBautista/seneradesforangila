@@ -27,23 +27,7 @@ let previousMusicBox = null;
 
 function display(songsToDisplay) {
     musicBody.innerHTML = ""; // Clear previous songs
-    if(songsToDisplay.length===0){
-      
-        const img = document.createElement("img");
-        img.src = "img/sowwy.gif";
-        img.style.width = "150px";
-        img.style.height ="150px";
-        img.style.borderRadius = "15px"
-       
-        musicBody.appendChild(img);
-
-        return;
-
-      
-       
-    }
     
-
     songsToDisplay.forEach((song, index) => {
         const musicContainer = document.createElement("div");
         musicContainer.classList.add("music-container");
@@ -59,8 +43,9 @@ function display(songsToDisplay) {
         }
 
         const img = document.createElement("img");
-        img.src = song.image;
+        img.setAttribute("data-src", song.image); // Use data-src for lazy loading
         img.alt = song.name;
+        img.classList.add("lazy"); // Add a class to identify lazy-loaded images
 
         const name = document.createElement("h3");
         name.textContent = song.name;
@@ -74,7 +59,7 @@ function display(songsToDisplay) {
 
         if (globalIndex === currentIndex) {
             playIcon.innerHTML = currentSong && !currentSong.paused ? '<i class="fas fa-pause"></i>' : '<i class="fas fa-play"></i>';
-            currentPlayIcon = playIcon; // Update current play icon
+            currentPlayIcon = playIcon;
         }
 
         const loader = document.createElement("div");
@@ -90,9 +75,30 @@ function display(songsToDisplay) {
       
         musicBody.appendChild(musicContainer);
     });
+
+    // Lazy load images
+    lazyLoadImages();
+}
+
+function lazyLoadImages() {
+    const lazyImages = document.querySelectorAll('img.lazy');
+    
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.getAttribute('data-src'); // Set src from data-src
+                img.classList.remove("lazy");
+                observer.unobserve(img); // Stop observing once loaded
+            }
+        });
+    });
+
+    lazyImages.forEach(img => imageObserver.observe(img));
 }
 
 display(songsList); // Initial display of all songs
+
 
 function playSong(index) {
     const { file, name, artist, image } = songsList[index];
