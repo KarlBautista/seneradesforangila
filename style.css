@@ -59,7 +59,7 @@ body{
 #search{
     width: 40px;
     margin-left: 20px;
-
+   
 }
 #searchMusic{
     border-radius: 50px;
@@ -372,6 +372,89 @@ body{
 }
 
 
+@keyframes expandInput {
+    from {
+        width: 0;
+    }
+    to {
+        width: 180px;
+    }
+}
+
+@keyframes collapseInput {
+    from {
+        width: 180px;
+    }
+    to {
+        width: 0;
+    }
+}
+
+/* When active class is added, apply animation */
+.header-right.active .search-input {
+    animation: expandInput 0.3s forwards;
+    opacity: 1;
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+.header-right:not(.active) .search-input {
+    animation: collapseInput 0.3s forwards;
+    opacity: 0;
+    padding: 0;
+}
+
+
+.body .sidebar {
+      
+    font-family: "Great Vibes";
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 2.5rem;
+    z-index: 10;
+    top: 105px;
+    left: 0;
+    padding: 20px;
+    height: 100%;
+    gap: 10px;
+    opacity: 0; /* Start fully transparent */
+    visibility: hidden; /* Start hidden */
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+
+    /* Glassmorphism style */
+    background: rgba(255, 255, 255, 0.2); /* Transparent white background */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass effect */
+}
+
+/* Fade-in effect for the sidebar */
+.sidebar.show {
+    opacity: 1; /* Make sidebar fully visible */
+    visibility: visible; /* Show the sidebar */
+}
+/* Writing animation */
+
+
+
+/* For larger screens, hide the burger menu */
+.burger-menu {
+animation: heartbeat 1s infinite;
+transition: 1s ease-in-out;
+font-size: 1.5rem;
+cursor: pointer;
+}
+
+.burger-menu:active{
+transform: scale(2);
+transition: 1s ease;
+}
+
+
 @media(min-width: 1527px){
     .body .sidebar{
         width: 13%;
@@ -420,57 +503,21 @@ body{
         font-size: 24px; /* Adjust icon size if needed */
     }
 
+    .sidebar.show {
+        left: 0;
+        width: 250px;
+    }
+
+    .music-body {
+        width: calc(100% - 250px);
+    }
+
     
     .body {
         flex-direction: column;
         align-items: center;
     }
-    .body .sidebar {
-      
-        font-family: "Great Vibes";
-        position: absolute;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        font-size: 2.5rem;
-        z-index: 10;
-        top: 105px;
-        left: 0;
-        padding: 20px;
-        height: 100%;
-        gap: 10px;
-        opacity: 0; /* Start fully transparent */
-        visibility: hidden; /* Start hidden */
-        transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
-
-        /* Glassmorphism style */
-        background: rgba(255, 255, 255, 0.2); /* Transparent white background */
-        backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
-        -webkit-backdrop-filter: blur(10px); /* Safari support */
-        border-radius: 15px; /* Rounded corners */
-        border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass effect */
-    }
-
-    /* Fade-in effect for the sidebar */
-    .sidebar.show {
-        opacity: 1; /* Make sidebar fully visible */
-        visibility: visible; /* Show the sidebar */
-    }
-    /* Writing animation */
-  
-   
-
-/* For larger screens, hide the burger menu */
-.burger-menu {
-    animation: heartbeat 1s infinite;
-    transition: 1s ease-in-out;
-    font-size: 1.5rem;
-}
-
-.burger-menu:active{
-    transform: scale(2);
-    transition: 1s ease;
-}
+    
 
 .body .music-body{
     width: 100%;
@@ -551,36 +598,7 @@ body{
     }
     
     /* Define keyframes for width animation */
-    @keyframes expandInput {
-        from {
-            width: 0;
-        }
-        to {
-            width: 180px;
-        }
-    }
-    
-    @keyframes collapseInput {
-        from {
-            width: 180px;
-        }
-        to {
-            width: 0;
-        }
-    }
-    
-    /* When active class is added, apply animation */
-    .header-right.active .search-input {
-        animation: expandInput 0.3s forwards;
-        opacity: 1;
-        padding: 5px;
-    }
-    
-    .header-right:not(.active) .search-input {
-        animation: collapseInput 0.3s forwards;
-        opacity: 0;
-        padding: 0;
-    }
+   
     
     .header-left{
 
