@@ -434,6 +434,9 @@ body{
 
 /* Fade-in effect for the sidebar */
 .sidebar.show {
+
+    left: 0;
+   
     opacity: 1; /* Make sidebar fully visible */
     visibility: visible; /* Show the sidebar */
 }
@@ -457,7 +460,7 @@ transition: 1s ease;
 
 @media(min-width: 1527px){
     .body .sidebar{
-        width: 13%;
+        width: 100%;
     }
 
     .albumPic .img{
@@ -470,7 +473,7 @@ transition: 1s ease;
 
 @media(min-width: 1400px){
     .body .sidebar{
-        width: 12%;
+        width: 100%;
     }
 
     .albumPic .img{
@@ -505,7 +508,7 @@ transition: 1s ease;
 
     .sidebar.show {
         left: 0;
-        width: 250px;
+        width: 500px;
     }
 
     .music-body {
@@ -569,7 +572,9 @@ transition: 1s ease;
      
        
     }
-   
+   .body .sidebar{
+    width: 100%;
+   }
 
 
     .header-right {
