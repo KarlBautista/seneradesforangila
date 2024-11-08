@@ -18,7 +18,7 @@ const songsList = [
     { file: "cancer.mp3", name: "Cancer", artist: "My Chemical Romance", image: "cancerr.jpg" },
     { file: "Starboy.mp3", name: "Starboy", artist: "The Weeknd", image: "starboy.png" },
     { file: "love story.mp3", name: "Love Story", artist: "Taylor Swift", image: "lovestory.jpg" },
-    {file: "myboyonlybreakshisfavoritetoy.mp3", name: "My Boy Only Breaks His Favorite Toy", artist: Taylor Swift, image: "tpdept.png"},
+    {file: "myboyonlybreakshisfavoritetoy.mp3", name: "My Boy Only Breaks His Favorite Toy", artist: "Taylor Swift", image: "tpdept.png"},
     { file: "timeless.mp3", name: "Timeless", artist: "Taylor Swift", image: "timeless.jpg"},
 ];
 
