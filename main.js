@@ -29,7 +29,21 @@ let previousMusicBox = null;
 
 function display(songsToDisplay) {
     musicBody.innerHTML = ""; // Clear previous songs
-    
+       if(songsToDisplay.length===0){
+      
+        const img = document.createElement("img");
+        img.src = "sowwy.gif";
+        img.style.width = "150px";
+        img.style.height ="150px";
+        img.style.borderRadius = "15px"
+       
+        musicBody.appendChild(img);
+
+        return;
+
+      
+       
+    }
     songsToDisplay.forEach((song, index) => {
         const musicContainer = document.createElement("div");
         musicContainer.classList.add("music-container");
