@@ -11,13 +11,13 @@ const title = document.querySelector(".title");
 const artistAlbum = document.querySelector(".artist-album");
 
 const songsList = [
-    { file: "music/Yellow-Coldplay.mp3", name: "Yellow", artist: "Coldplay", image: "img/yellow-bg.jpg" },
-    { file: "music/save your tears.mp3", name: "Save Your Tears", artist: "The Weeknd", image: "img/save your tears-bg.png" },
-    { file: "music/Dilaw.mp3", name: "Dilaw", artist: "Maki", image: "img/dilaww.jpg" },
-    { file: "music/in bloom.mp3", name: "In Bloom", artist: "Neck Deep", image: "img/inbloom.jpg" },
-    { file: "music/cancer.mp3", name: "Cancer", artist: "My Chemical Romance", image: "img/cancerr.jpg" },
-    { file: "music/Starboy.mp3", name: "Starboy", artist: "The Weeknd", image: "img/starboy.png" },
-    { file: "music/love story.mp3", name: "Love Story", artist: "Taylor Swift", image: "img/lovestory.jpg" },
+    { file: "Yellow-Coldplay.mp3", name: "Yellow", artist: "Coldplay", image: "yellow-bg.jpg" },
+    { file: "save your tears.mp3", name: "Save Your Tears", artist: "The Weeknd", image: "save your tears-bg.png" },
+    { file: "Dilaw.mp3", name: "Dilaw", artist: "Maki", image: "dilaww.jpg" },
+    { file: "in bloom.mp3", name: "In Bloom", artist: "Neck Deep", image: "inbloom.jpg" },
+    { file: "cancer.mp3", name: "Cancer", artist: "My Chemical Romance", image: "cancerr.jpg" },
+    { file: "Starboy.mp3", name: "Starboy", artist: "The Weeknd", image: "starboy.png" },
+    { file: "love story.mp3", name: "Love Story", artist: "Taylor Swift", image: "lovestory.jpg" },
 ];
 
 let currentSong = null;
