@@ -144,6 +144,13 @@ function playSong(index) {
 
     setUpAudio();
     controlBtn();
+
+    currentSong.addEventListener("ended", playNextSong);
+}
+
+function playNextSong() {
+    const nextIndex = (currentIndex + 1) % songsList.length; // Move to the next song or loop to the start
+    playSong(nextIndex);
 }
 
 
